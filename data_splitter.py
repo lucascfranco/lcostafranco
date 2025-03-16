@@ -10,7 +10,7 @@ diretorio_entrada = "~/Desktop/Grafos/data"
 diretorio_saida = "~/Documents/Github/lcostafranco/graph_data"
 
 # Tamanho de cada arquivo menor (em linhas)
-tamanho_chunk = 5000
+tamanho_chunk = 250000
 
 # Nomes dos arquivos que vamos dividir
 arquivos = [
@@ -29,7 +29,7 @@ for nome_arquivo in arquivos:
     os.makedirs(diretorio_saida, exist_ok=True)
 
     # Ler e dividir em partes menores
-    with pd.read_csv(caminho_entrada, sep='\t', chunksize=5000) as reader:
+    with pd.read_csv(caminho_entrada, sep='\t', chunksize=250000) as reader:
         for i, chunk in enumerate(reader):
             # Monta nome do arquivo de saída
             arquivo_saida = f"{nome_arquivo.replace('.tsv', '')}_part_{i+1}.tsv"
