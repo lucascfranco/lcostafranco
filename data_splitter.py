@@ -4,10 +4,10 @@ import os
 # ======================== CONFIGURAÇÕES INICIAIS ======================== #
 
 # Diretório onde estão os arquivos originais .tsv
-diretorio_entrada = "/Desktop/Grafos/data"
+diretorio_entrada = "~/Desktop/Grafos/data"
 
 # Diretório onde serão salvos os arquivos menores
-diretorio_saida = "/Documents/Github/lcostafranco/graph_data"
+diretorio_saida = "~/Documents/Github/lcostafranco/graph_data"
 
 # Tamanho de cada arquivo menor (em linhas)
 tamanho_chunk = 5000
